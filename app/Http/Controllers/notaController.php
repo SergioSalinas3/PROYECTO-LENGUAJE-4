@@ -33,7 +33,7 @@ class notaController extends Controller
 
      public function store(Request $request ){
         $request->validate([
-            'textoN'=>'required|alpha',
+            'textoN'=>'required',
             'fechaN'=>'required|date',
             'contacto_id'=>'required|numeric',
           
@@ -55,7 +55,7 @@ class notaController extends Controller
         public function update(Request $request, $id){
 
                     $request->validate([
-                        'nombreE'=>'required|alpha',
+                        'nombreE'=>'required',
                         'fechaE'=>'required|date',
                         'contacto_id'=>'required|numeric',
                       
@@ -73,7 +73,7 @@ class notaController extends Controller
         
             if($actualizadaNota){
                return redirect()->route('nota.index')
-               ->with('mensaje', 'La Nota fue modificado Exitosamente.');
+               ->with('mensaje', 'La Nota fue modificada Exitosamente.');
              }else{
               return back();
            }

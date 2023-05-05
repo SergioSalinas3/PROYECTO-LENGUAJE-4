@@ -8,7 +8,7 @@ use Database\Factories\NotaFactory;
 class nota extends Model
 {
     use HasFactory;
-    public function contactos(){
-        $this->hasMany(nota::class);
+    public function contacto(){
+        $this->belongsTo(nota::class);
     }
 }

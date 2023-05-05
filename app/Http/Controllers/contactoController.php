@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\contacto;
-
+use Illuminate\Support\Facades\DB;
 
 
 class contactoController extends Controller
@@ -48,8 +48,8 @@ class contactoController extends Controller
     public function store(Request $request){
 
         $request->validate([
-            'nombreC'=>'required|alpha',
-            'apellidoC'=>'required|alpha',
+            'nombreC'=>'required',
+            'apellidoC'=>'required',
             'correoC'=>'required|email',
             'telefonoC'=>'required'
           
@@ -79,8 +79,8 @@ public function update(Request $request, $id){
 
    
         $request->validate([
-            'nombreC'=>'required|alpha',
-            'apellidoC'=>'required|alpha',
+            'nombreC'=>'required',
+            'apellidoC'=>'required',
             'correoC'=>'required|email',
             'telefonoC'=>'required'
           

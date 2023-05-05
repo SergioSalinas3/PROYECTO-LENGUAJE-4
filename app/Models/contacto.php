@@ -11,9 +11,9 @@ class contacto extends Model
     use HasFactory;
 
     public function eventos(){
-        $this->belongsTo(contacto::class);
+        $this->hasMany(contacto::class);
     }
     public function notas(){
-        $this->belongsTo(contacto::class);
+        $this->hasMany(contacto::class);
     }
 }

@@ -8,8 +8,8 @@ use Database\Factories\EventoFactory;
 class evento extends Model
 {
     use HasFactory;
-    public function contactos(){
-        $this->hasMany(evento::class);
+    public function contacto(){
+        $this->belongsTo(evento::class);
     }
    
 }
